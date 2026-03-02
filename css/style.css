@@ -1,0 +1,280 @@
+/* ============================================================
+   VARIABLES
+   Guardamos aquí todos los valores que repetiremos en el CSS.
+   Si quieres cambiar el color principal, solo lo tocas aquí.
+============================================================ */
+:root {
+  --negro: #0a0a0a;
+  --blanco: #f5f5f0;
+  --gris-claro: #e8e8e2;
+  --gris-medio: #999990;
+  --gris-oscuro: #2a2a2a;
+  --acento: #c8ff00;
+
+  --fuente-titulo: 'DM Serif Display', serif;
+  --fuente-codigo: 'DM Mono', monospace;
+  --fuente-texto: 'DM Sans', sans-serif;
+}
+
+/* ============================================================
+   RESET
+   El navegador añade márgenes y estilos por defecto que
+   no queremos. Con esto los eliminamos todos.
+============================================================ */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--negro);
+  color: var(--blanco);
+  font-family: var(--fuente-texto);
+  font-weight: 300;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ============================================================
+   TIPOGRAFÍA
+   Importamos las fuentes de Google Fonts.
+   DM Serif Display → títulos elegantes con serifa
+   DM Mono         → etiquetas y código, look técnico
+   DM Sans         → texto corrido, limpio y legible
+============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap');
+
+h1, h2, h3 {
+  font-family: var(--fuente-titulo);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ============================================================
+   LAYOUT BASE
+   Cada sección tiene un ancho máximo y padding para respirar.
+   margin: 0 auto → centra el contenido horizontalmente.
+============================================================ */
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8rem 4rem;
+}
+
+/* ============================================================
+   NAVEGACIÓN
+   position: fixed     → se queda fija al hacer scroll
+   backdrop-filter     → efecto cristal/blur en el fondo
+   z-index: 100        → se pone por encima de todo
+============================================================ */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 1.5rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  backdrop-filter: blur(20px);
+  background: rgba(10,10,10,0.7);
+}
+
+nav a {
+  font-family: var(--fuente-codigo);
+  font-size: 0.85rem;
+  color: var(--acento);
+  letter-spacing: 0.1em;
+}
+
+nav ul {
+  display: flex;
+  gap: 2.5rem;
+}
+
+nav ul a {
+  font-family: var(--fuente-codigo);
+  font-size: 0.8rem;
+  color: var(--gris-medio);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+nav ul a:hover {
+  color: var(--blanco);
+}
+
+/* ============================================================
+   HERO
+   min-height: 100vh → ocupa toda la pantalla al cargar
+   display: flex + flex-direction: column → apila el contenido
+============================================================ */
+#hero {
+  min-height: 100vh;
+  max-width: 100%;
+  padding: 0 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#hero p:first-child {
+  font-family: var(--fuente-codigo);
+  font-size: 0.8rem;
+  color: var(--acento);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+#hero h1 {
+  font-size: clamp(3.5rem, 8vw, 8rem);
+  /* clamp(min, preferido, max): escala el tamaño según la pantalla */
+  letter-spacing: -0.02em;
+  margin-bottom: 2rem;
+}
+
+#hero h1 em {
+  font-style: italic;
+  color: var(--gris-medio);
+}
+
+#hero p:nth-child(3) {
+  font-size: 1.1rem;
+  color: var(--gris-medio);
+  max-width: 500px;
+  margin-bottom: 3rem;
+}
+
+#hero div {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+/* Botón principal */
+#hero a:nth-child(1) {
+  background: var(--acento);
+  color: var(--negro);
+  padding: 1rem 2.5rem;
+  font-family: var(--fuente-codigo);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#hero a:nth-child(1):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(200, 255, 0, 0.3);
+}
+
+/* Botón secundario */
+#hero a:nth-child(2) {
+  font-family: var(--fuente-codigo);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--gris-oscuro);
+  padding-bottom: 2px;
+  transition: border-color 0.3s ease;
+}
+
+#hero a:nth-child(2):hover {
+  border-color: var(--blanco);
+}
+
+/* ============================================================
+   DIVISOR entre secciones
+============================================================ */
+.divisor {
+  width: 100%;
+  height: 1px;
+  background: var(--gris-oscuro);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ============================================================
+   ETIQUETAS DE SECCIÓN (// 01 — sobre mí)
+============================================================ */
+.seccion-label, section > p:first-child {
+  font-family: var(--fuente-codigo);
+  font-size: 0.75rem;
+  color: var(--acento);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+section h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  margin-bottom: 1.5rem;
+}
+
+section h2 em {
+  font-style: italic;
+  color: var(--gris-medio);
+}
+
+/* ============================================================
+   FOOTER
+============================================================ */
+footer {
+  border-top: 1px solid var(--gris-oscuro);
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--fuente-codigo);
+  font-size: 0.75rem;
+  color: var(--gris-oscuro);
+  letter-spacing: 0.08em;
+}
+
+/* ============================================================
+   RESPONSIVE — pantallas pequeñas
+   @media: aplica estos estilos solo si la pantalla
+   es menor de 768px (tablets y móviles)
+============================================================ */
+@media (max-width: 768px) {
+  nav {
+    padding: 1.2rem 1.5rem;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  #hero {
+    padding: 0 1.5rem;
+  }
+
+  section {
+    padding: 5rem 1.5rem;
+  }
+
+  footer {
+    padding: 2rem 1.5rem;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}
