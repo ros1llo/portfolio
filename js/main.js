@@ -55,9 +55,7 @@ document.querySelectorAll('a, button').forEach(el => {
 // ============================================================
 
 // Anadimos la clase "reveal" a los elementos que queremos animar
-const elementosAnimados = document.querySelectorAll(
-  '#sobre > div, .servicio-card, .proyecto-card, #contacto h2, #contacto p, #contacto a'
-);
+const elementosAnimados = document.querySelectorAll('.reveal');
 
 elementosAnimados.forEach(el => {
   el.classList.add('reveal');
