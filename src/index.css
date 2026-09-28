@@ -134,6 +134,30 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   background: var(--borde);
 }
 
+/* ===== PALETA INVERTIDA (skillset, footer…) ===== */
+.tema-invertido {
+  --fondo: #0d0d0b;
+  --fondo-tarjeta: #1c1c19;
+  --texto: #efeeeb;
+  --texto-suave: #bfbab2;
+  --texto-numero: #9e9991;
+  --borde: #918e89;
+  --acento-texto: #c8ff00;
+
+  background: var(--fondo);
+  color: var(--texto);
+}
+
+[data-theme="dark"] .tema-invertido {
+  --fondo: #efeeeb;
+  --fondo-tarjeta: #e2e0db;
+  --texto: #0d0d0b;
+  --texto-suave: #5e5b55;
+  --texto-numero: #6b6862;
+  --borde: #6b6862;
+  --acento-texto: #4d6b00;
+}
+
 @media (max-width: 768px) {
   .section { padding: 5rem 1.5rem; }
   .divider { width: calc(100% - 3rem); }

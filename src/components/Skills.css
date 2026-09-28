@@ -1,25 +1,7 @@
 /* ===== PALETA INVERTIDA ===== */
 .skills-section {
-  --fondo: #0d0d0b;
-  --texto: #efeeeb;
-  --texto-suave: #bfbab2;
-  --texto-numero: #9e9991;
-  --borde: #918e89;
-  --acento-texto: #c8ff00;
-
   position: relative;
-  background: var(--fondo);
-  color: var(--texto);
   scroll-margin-top: 0;
-}
-
-[data-theme="dark"] .skills-section {
-  --fondo: #efeeeb;
-  --texto: #0d0d0b;
-  --texto-suave: #5e5b55;
-  --texto-numero: #6b6862;
-  --borde: #6b6862;
-  --acento-texto: #4d6b00;
 }
 
 .skills-inner {

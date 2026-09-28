@@ -7,6 +7,8 @@ import Divider from "./components/Divider";
 import Technologies from "./components/Technologies";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   const { theme, toggleTheme } = useTheme();
@@ -36,11 +38,9 @@ function App() {
         </section>
 
         <Skills skills={data.skills} />
-
-        {/* Provisional: siguiente bloque */}
-        <section id="contacto" className="section" style={{ minHeight: "100vh" }}>
-        <p className="seccion-label">Contacto (siguiente paso)</p>
-        </section>
+        <Contact contact={data.contact} social={data.social} />
+        
+        <Footer footer={data.footer} social={data.social} />
       </main>
     </>
   );

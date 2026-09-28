@@ -87,7 +87,7 @@ function Skills({ skills }) {
   }, []);
 
   return (
-    <section id="que-hago" className="skills-section">
+    <section id="que-hago" className="skills-section tema-invertido">
       <div className="skills-inner">
         <p className="seccion-label">{skills.label}</p>
         <h2 className="seccion-titulo skills-heading">{skills.title} <em>{skills.titleAccent}</em></h2>

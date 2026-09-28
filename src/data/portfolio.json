@@ -22,7 +22,7 @@
   },
     "about": {
     "label": "// 01 — sobre mí",
-    "text": "Soy Álvaro, desarrollador web en Valencia. Estudio DAW y soy co-fundador de *Seggno,* donde diseño y programo webs para *negocios* *locales* que quieren crecer en internet. Me importan los detalles: que cargue rápido, que se vea bien y que *funcione.*"
+    "text": "Soy Álvaro, desarrollador web en Valencia. Estudio DAW y soy fundador de *Seggno,* donde diseño y programo webs para *negocios* *locales* que quieren crecer en internet. Me importan los detalles: que cargue rápido, que se vea bien y que *funcione.*"
   },
       "tech": {
     "label": "// 02 — tecnologías",
@@ -116,5 +116,22 @@
         "image": "/skills/diseno.webp"
       }
     ]
+  },
+    "contact": {
+    "label": "// 06 — contacto",
+    "title": "Hablemos",
+    "titleAccent": "de tu proyecto.",
+    "text": "¿Buscas un desarrollador en prácticas o una web para tu negocio? Cuéntame qué necesitas y te respondo en menos de 24 horas.",
+    "email": "a.rosolmedo@gmail.com",
+    "reasons": [
+      { "id": "web", "label": "Necesito una web" },
+      { "id": "trabajo", "label": "Prácticas o trabajo" },
+      { "id": "saludo", "label": "Solo saludar" }
+    ]
+  },
+    "footer": {
+    "tagline": "Entre el código y el diseño.",
+    "wordmark": "Rosillo",
+    "name": "Álvaro Rosillo"
   }
 }
