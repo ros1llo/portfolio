@@ -5,5 +5,19 @@
     { "id": "proyectos", "label": "Proyectos" },
     { "id": "que-hago", "label": "Qué hago" },
     { "id": "contacto", "label": "Contacto" }
-  ]
+  ],
+  "social": [
+    { "id": "github", "label": "GitHub", "url": "https://github.com/ros1llo" },
+    { "id": "linkedin", "label": "LinkedIn", "url": "https://linkedin.com/in/álvaro-rosillo-olmedo-909b76386" },
+    { "id": "email", "label": "Email", "url": "mailto:a.rosolmedo@gmail.com" }
+  ],
+  "hero": {
+    "eyebrow": "Disponible para prácticas · Valencia",
+    "firstName": "Álvaro",
+    "lastName": "Rosillo",
+    "disciplines": ["Desarrollo web", "React", "SEO local", "WordPress"],
+    "tagline": "Construyo webs rápidas y cuidadas para negocios reales. Estudiante de DAW y co-fundador de Seggno.",
+    "photo": "/foto.jpg",
+    "photoAlt": "Retrato de Álvaro Rosillo"
+  }
 }
