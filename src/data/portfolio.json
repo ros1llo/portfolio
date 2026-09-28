@@ -23,5 +23,22 @@
     "about": {
     "label": "// 01 — sobre mí",
     "text": "Soy Álvaro, desarrollador web en Valencia. Estudio DAW y soy co-fundador de *Seggno,* donde diseño y programo webs para *negocios* *locales* que quieren crecer en internet. Me importan los detalles: que cargue rápido, que se vea bien y que *funcione.*"
+  },
+      "tech": {
+    "label": "// 02 — tecnologías",
+    "items": [
+      { "id": "html", "label": "HTML" },
+      { "id": "css", "label": "CSS" },
+      { "id": "js", "label": "JavaScript" },
+      { "id": "react", "label": "React" },
+      { "id": "wordpress", "label": "WordPress" },
+      { "id": "php", "label": "PHP" },
+      { "id": "java", "label": "Java" },
+      { "id": "mysql", "label": "MySQL" },
+      { "id": "git", "label": "Git" },
+      { "id": "github", "label": "GitHub" },
+      { "id": "figma", "label": "Figma" },
+      { "id": "vercel", "label": "Vercel" }
+    ]
   }
 }
