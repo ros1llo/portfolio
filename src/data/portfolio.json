@@ -40,5 +40,50 @@
       { "id": "figma", "label": "Figma" },
       { "id": "vercel", "label": "Vercel" }
     ]
+  },
+    "projects": {
+    "label": "// 03 — proyectos",
+    "title": "Proyectos seleccionados",
+    "items": [
+      {
+        "id": "monalisa",
+        "name": "Monalisa Il Bistrot",
+        "category": "Restaurante · Cliente",
+        "role": "COMPLETAR (ej: Diseño y desarrollo)",
+        "timeline": "COMPLETAR (ej: 2 meses)",
+        "year": "COMPLETAR",
+        "team": "Seggno",
+        "description": "COMPLETAR: 1-2 frases sobre qué necesitaba el cliente y qué hiciste.",
+        "stack": ["React", "CSS", "JavaScript"],
+        "url": "https://monalisa-bistrot.vercel.app/",
+        "image": "/projects/monalisa.webp"
+      },
+      {
+        "id": "la-orda",
+        "name": "La Orda",
+        "category": "Tienda · COMPLETAR",
+        "role": "COMPLETAR",
+        "timeline": "COMPLETAR",
+        "year": "COMPLETAR",
+        "team": "COMPLETAR",
+        "description": "COMPLETAR",
+        "stack": ["React", "CSS", "JavaScript"],
+        "url": "https://la-orda-demo2801.vercel.app/",
+        "image": "/projects/la-orda.webp"
+      },
+      {
+        "id": "fisiovida",
+        "name": "FisioVida",
+        "category": "Clínica · COMPLETAR",
+        "role": "COMPLETAR",
+        "timeline": "COMPLETAR",
+        "year": "COMPLETAR",
+        "team": "COMPLETAR",
+        "description": "COMPLETAR",
+        "stack": ["HTML", "CSS", "JavaScript"],
+        "url": "https://github.com/ros1llo/clinica-fisioterapia",
+        "image": "/projects/fisiovida.webp"
+      }
+    ]
   }
 }

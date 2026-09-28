@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Divider from "./components/Divider";
 import Technologies from "./components/Technologies";
+import Projects from "./components/Projects";
 
 function App() {
   const { theme, toggleTheme } = useTheme();
@@ -25,11 +26,12 @@ function App() {
         <Divider />
         <Technologies tech={data.tech} />
         <Divider />
-
+        <Projects projects={data.projects} />
+        <Divider />
 
         {/* Provisional: para poder probar el scroll */}
         <section className="section" style={{ minHeight: "100vh" }}>
-        <p className="seccion-label">Tecnologías (siguiente paso)</p>
+        <p className="seccion-label">Seggno (siguiente paso)</p>
         </section>
       </main>
     </>

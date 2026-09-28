@@ -1,0 +1,184 @@
+.projects-heading { margin-bottom: 3rem; }
+
+.projects-list { border-top: 1px solid var(--borde); }
+
+.project-row { border-bottom: 1px solid var(--borde); }
+
+.project-link {
+  display: grid;
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+
+.project-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.project-head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.project-title {
+  font-size: clamp(1.8rem, 4.2vw, 3.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  transition: opacity 0.4s ease;
+}
+
+.project-cta {
+  font-family: var(--fuente-codigo);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--texto);
+  border-radius: 999px;
+  transition: opacity 0.4s ease, border-color 0.4s ease;
+}
+
+/* ===== DATOS (rol, duración, año, equipo) ===== */
+.project-meta {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: start;
+  gap: 1rem 2.5rem;
+}
+
+.project-meta dt {
+  font-family: var(--fuente-codigo);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+}
+
+.project-meta dd { font-size: 0.95rem; }
+
+/* ===== PORTADA ===== */
+.project-cover {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  background: var(--fondo-tarjeta);
+}
+
+.project-cover img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  gap: 0.4rem;
+  padding: 1rem;
+  background: linear-gradient(180deg, rgba(4, 4, 4, 0) 19%, rgba(4, 4, 4, 0.94) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.chip {
+  font-family: var(--fuente-codigo);
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  background: hsla(0, 0%, 40%, 0.1);
+  transform: translateY(6px);
+  transition: transform 0.3s ease;
+}
+
+/* ===== LA OLA DE LETRAS ===== */
+.split-char { transition: color 0.2s linear; }
+
+@media (prefers-reduced-motion: no-preference) and (hover: hover) {
+  .split-text.is-on .split-char {
+    animation: wave 0.4s ease both;
+    animation-delay: calc(var(--i) * 16ms);
+  }
+}
+
+@keyframes wave {
+  0%  { color: currentColor; animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1); }
+  45% { color: var(--acento-texto); animation-timing-function: cubic-bezier(0.55, 0, 1, 0.45); }
+}
+
+/* ===== ACORDEÓN: solo escritorio con ratón ===== */
+@media (min-width: 1024px) and (hover: hover) {
+  .project-row {
+    height: 112px;
+    overflow: hidden;
+    transition: height 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .project-row.is-active { height: 270px; }
+
+  .project-link {
+    position: relative;
+    height: 100%;
+    grid-template-columns: 1fr 330px;
+    gap: 2rem;
+    padding: 1.5rem 0;
+  }
+
+  .project-head {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  /* Filas cerradas: atenuadas */
+  .project-row:not(.is-active) .project-title,
+  .project-row:not(.is-active) .project-cta { opacity: 0.45; }
+
+  .project-row:not(.is-active) .project-cta { border-color: var(--borde); }
+
+  /* Datos anclados abajo: no empujan la altura */
+  .project-meta {
+    position: absolute;
+    bottom: 24px;
+    left: 0;
+    grid-template-columns: repeat(4, auto);
+    gap: 0 3rem;
+  }
+
+  .project-cover img { width: 330px; aspect-ratio: 3 / 2; }
+
+  /* Portada y datos: ocultos en filas cerradas */
+  .project-cover,
+  .project-meta {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+
+  .is-active .project-cover,
+  .is-active .project-meta {
+    opacity: 1;
+    transform: none;
+    transition-delay: 0.1s;
+  }
+
+  /* Overlay con chips al pasar por la imagen */
+  .project-cover:hover .project-overlay { opacity: 1; }
+  .project-cover:hover .chip { transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-row,
+  .project-cover,
+  .project-meta { transition: none; }
+}
