@@ -1,0 +1,9 @@
+{
+  "logo": "AR.DEV",
+  "nav": [
+    { "id": "sobre", "label": "Sobre mí" },
+    { "id": "proyectos", "label": "Proyectos" },
+    { "id": "que-hago", "label": "Qué hago" },
+    { "id": "contacto", "label": "Contacto" }
+  ]
+}
