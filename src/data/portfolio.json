@@ -85,5 +85,36 @@
         "image": "/projects/fisiovida.webp"
       }
     ]
+  },
+    "skills": {
+    "label": "// 05 — qué hago",
+    "title": "Qué",
+    "titleAccent": "hago.",
+    "items": [
+      {
+        "id": "frontend",
+        "title": "Desarrollo frontend",
+        "description": "Interfaces en React y JavaScript: rápidas, adaptadas a móvil y fáciles de mantener.",
+        "image": "/skills/frontend.webp"
+      },
+      {
+        "id": "webs-negocio",
+        "title": "Webs para negocios",
+        "description": "De la idea a la web publicada: estructura, textos, formularios y puesta en marcha.",
+        "image": "/skills/webs.webp"
+      },
+      {
+        "id": "seo-local",
+        "title": "SEO local",
+        "description": "Que te encuentren en tu barrio: ficha de Google, contenido local y una web técnicamente rápida.",
+        "image": "/skills/seo.webp"
+      },
+      {
+        "id": "diseno",
+        "title": "Diseño de interfaces",
+        "description": "Maqueto y pruebo las ideas en Figma antes de escribir una línea de código.",
+        "image": "/skills/diseno.webp"
+      }
+    ]
   }
 }

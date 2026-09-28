@@ -6,6 +6,7 @@ import About from "./components/About";
 import Divider from "./components/Divider";
 import Technologies from "./components/Technologies";
 import Projects from "./components/Projects";
+import Skills from "./components/Skills";
 
 function App() {
   const { theme, toggleTheme } = useTheme();
@@ -29,9 +30,16 @@ function App() {
         <Projects projects={data.projects} />
         <Divider />
 
-        {/* Provisional: para poder probar el scroll */}
-        <section className="section" style={{ minHeight: "100vh" }}>
-        <p className="seccion-label">Seggno (siguiente paso)</p>
+        {/* Reservado: bloque Seggno */}
+        <section className="section" style={{ minHeight: "60vh" }}>
+        <p className="seccion-label">// 04 — seggno (próximamente)</p>
+        </section>
+
+        <Skills skills={data.skills} />
+
+        {/* Provisional: siguiente bloque */}
+        <section id="contacto" className="section" style={{ minHeight: "100vh" }}>
+        <p className="seccion-label">Contacto (siguiente paso)</p>
         </section>
       </main>
     </>
