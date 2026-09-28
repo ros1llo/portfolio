@@ -1,0 +1,171 @@
+.contact {
+  position: relative;
+  overflow: hidden;
+  scroll-margin-top: 0;
+}
+
+/* ===== FONDO: CUADRÍCULA TÉCNICA ===== */
+.contact::before {
+  content: "";
+  position: absolute;
+  inset: -48px;
+  background-image:
+    linear-gradient(var(--borde) 1px, transparent 1px),
+    linear-gradient(90deg, var(--borde) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at 70% 50%, black 10%, transparent 70%);
+  opacity: 0.6;
+  animation: grid-pan 12s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes grid-pan {
+  to { transform: translate(48px, 48px); }
+}
+
+.contact-inner {
+  position: relative;
+  max-width: 1200px;
+  min-height: 100svh;
+  margin: 0 auto;
+  padding: 8rem 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+/* ===== INTRO ===== */
+.contact-title {
+  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+.contact-title em {
+  display: block;
+  font-style: italic;
+  color: var(--acento-texto);
+}
+
+.contact-text { color: var(--texto-suave); max-width: 440px; margin-bottom: 1.5rem; }
+
+.contact-direct { font-size: 0.95rem; color: var(--texto-suave); margin-bottom: 2rem; }
+
+.contact-direct a { color: var(--texto); border-bottom: 1px solid var(--acento-texto); }
+
+/* ===== FORMULARIO ===== */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  padding: 2.5rem;
+  background: color-mix(in srgb, var(--fondo) 85%, transparent);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+}
+
+.field { display: flex; flex-direction: column; gap: 0.5rem; border: none; }
+
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+
+.field-label {
+  font-family: var(--fuente-codigo);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+}
+
+.field-optional { text-transform: none; letter-spacing: 0; opacity: 0.7; }
+
+.field input,
+.field textarea {
+  font: inherit;
+  color: var(--texto);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--borde);
+  padding: 0.5rem 0;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-bottom-color: var(--acento-texto);
+}
+
+.field [aria-invalid="true"] { border-bottom-color: #d64545; }
+
+.field-error { font-size: 0.8rem; color: #d64545; }
+
+/* ===== MOTIVOS (radios con aspecto de botón) ===== */
+.reason-options { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+.reason {
+  position: relative;
+  font-family: var(--fuente-codigo);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--borde);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.reason:hover { border-color: var(--texto); }
+
+.reason.is-selected {
+  background: var(--acento-fondo);
+  border-color: var(--acento-fondo);
+  color: #0a0a0a;
+}
+
+/* El radio real se oculta, pero sigue funcionando con teclado */
+.reason input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.reason:has(input:focus-visible) { outline: 2px solid var(--acento-texto); outline-offset: 2px; }
+
+.honeypot { position: absolute; left: -9999px; }
+
+.contact-submit { align-self: flex-start; border: none; cursor: pointer; }
+.contact-submit:disabled { opacity: 0.6; cursor: wait; }
+
+/* ===== ÉXITO ===== */
+.contact-success {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 2.5rem;
+  border: 1px solid var(--acento-texto);
+  border-radius: 6px;
+}
+
+.contact-success-title { font-family: var(--fuente-titulo); font-size: 2rem; }
+
+/* ===== MÓVIL ===== */
+@media (max-width: 900px) {
+  .contact-inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 5rem 1.5rem;
+    min-height: auto;
+  }
+
+  .contact-form { padding: 1.5rem; }
+  .field-row { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact::before { animation: none; }
+}

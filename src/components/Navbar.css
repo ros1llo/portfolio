@@ -1,0 +1,121 @@
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  height: var(--nav-altura);
+  padding: 0 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  border-bottom: 1px solid transparent;
+  transition: transform 0.4s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Al bajar un poco: fondo semitransparente con desenfoque */
+.navbar--solid {
+  background: color-mix(in srgb, var(--fondo) 85%, transparent);
+  backdrop-filter: blur(20px);
+  border-bottom-color: var(--borde);
+}
+
+/* Escondido: se desplaza hacia arriba su propia altura */
+.navbar--hidden { transform: translateY(-100%); }
+
+.navbar-logo {
+  font-family: var(--fuente-codigo);
+  font-size: 0.85rem;
+  color: var(--acento-texto);
+  letter-spacing: 0.1em;
+  position: relative;
+  z-index: 2;
+}
+
+.navbar-links { display: flex; gap: 2.5rem; }
+
+.navbar-links a {
+  font-family: var(--fuente-codigo);
+  font-size: 0.8rem;
+  color: var(--texto-suave);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0;
+  width: 0; height: 1px;
+  background: var(--acento-texto);
+  transition: width 0.3s ease;
+}
+
+.navbar-links a:hover { color: var(--texto); }
+.navbar-links a:hover::after { width: 100%; }
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== BOTÓN TEMA ===== */
+.theme-toggle {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--borde);
+  border-radius: 50%;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.theme-toggle svg { width: 18px; height: 18px; }
+.theme-toggle:hover { border-color: var(--acento-texto); transform: rotate(20deg); }
+
+/* ===== HAMBURGUESA (solo móvil) ===== */
+.navbar-toggle {
+  display: none;
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+.navbar-toggle span {
+  position: absolute;
+  left: 4px; right: 4px;
+  height: 1px;
+  background: var(--texto);
+  transition: transform 0.3s ease, top 0.3s ease;
+}
+
+.navbar-toggle span:nth-child(1) { top: 12px; }
+.navbar-toggle span:nth-child(2) { top: 20px; }
+.navbar-toggle.is-open span:nth-child(1) { top: 16px; transform: rotate(45deg); }
+.navbar-toggle.is-open span:nth-child(2) { top: 16px; transform: rotate(-45deg); }
+
+/* ===== MÓVIL ===== */
+@media (max-width: 768px) {
+  .navbar { padding: 0 1.5rem; }
+  .navbar-toggle { display: block; }
+
+  .navbar-links {
+    position: fixed;
+    inset: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: var(--fondo);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .navbar-links.is-open { opacity: 1; pointer-events: auto; }
+  .navbar-links a { font-size: 1.2rem; }
+}

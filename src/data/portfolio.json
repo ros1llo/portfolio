@@ -1,0 +1,137 @@
+{
+  "logo": "AR.DEV",
+  "nav": [
+    { "id": "sobre", "label": "Sobre mí" },
+    { "id": "proyectos", "label": "Proyectos" },
+    { "id": "que-hago", "label": "Qué hago" },
+    { "id": "contacto", "label": "Contacto" }
+  ],
+  "social": [
+    { "id": "github", "label": "GitHub", "url": "https://github.com/ros1llo" },
+    { "id": "linkedin", "label": "LinkedIn", "url": "https://linkedin.com/in/álvaro-rosillo-olmedo-909b76386" },
+    { "id": "email", "label": "Email", "url": "mailto:a.rosolmedo@gmail.com" }
+  ],
+  "hero": {
+    "eyebrow": "Disponible para prácticas · Valencia",
+    "firstName": "Álvaro",
+    "lastName": "Rosillo",
+    "disciplines": ["Desarrollo web", "React", "SEO local", "WordPress"],
+    "tagline": "Construyo webs rápidas y cuidadas para negocios reales. Estudiante de DAW y co-fundador de Seggno.",
+    "photo": "/foto.jpg",
+    "photoAlt": "Retrato de Álvaro Rosillo"
+  },
+    "about": {
+    "label": "// 01 — sobre mí",
+    "text": "Soy Álvaro, desarrollador web en Valencia. Estudio DAW y soy fundador de *Seggno,* donde diseño y programo webs para *negocios* *locales* que quieren crecer en internet. Me importan los detalles: que cargue rápido, que se vea bien y que *funcione.*"
+  },
+      "tech": {
+    "label": "// 02 — tecnologías",
+    "items": [
+      { "id": "html", "label": "HTML" },
+      { "id": "css", "label": "CSS" },
+      { "id": "js", "label": "JavaScript" },
+      { "id": "react", "label": "React" },
+      { "id": "wordpress", "label": "WordPress" },
+      { "id": "php", "label": "PHP" },
+      { "id": "java", "label": "Java" },
+      { "id": "mysql", "label": "MySQL" },
+      { "id": "git", "label": "Git" },
+      { "id": "github", "label": "GitHub" },
+      { "id": "figma", "label": "Figma" },
+      { "id": "vercel", "label": "Vercel" }
+    ]
+  },
+    "projects": {
+    "label": "// 03 — proyectos",
+    "title": "Proyectos seleccionados",
+    "items": [
+      {
+        "id": "monalisa",
+        "name": "Monalisa Il Bistrot",
+        "category": "Restaurante · Cliente",
+        "role": "COMPLETAR (ej: Diseño y desarrollo)",
+        "timeline": "COMPLETAR (ej: 2 meses)",
+        "year": "COMPLETAR",
+        "team": "Seggno",
+        "description": "COMPLETAR: 1-2 frases sobre qué necesitaba el cliente y qué hiciste.",
+        "stack": ["React", "CSS", "JavaScript"],
+        "url": "https://monalisa-bistrot.vercel.app/",
+        "image": "/projects/monalisa.webp"
+      },
+      {
+        "id": "la-orda",
+        "name": "La Orda",
+        "category": "Tienda · COMPLETAR",
+        "role": "COMPLETAR",
+        "timeline": "COMPLETAR",
+        "year": "COMPLETAR",
+        "team": "COMPLETAR",
+        "description": "COMPLETAR",
+        "stack": ["React", "CSS", "JavaScript"],
+        "url": "https://la-orda-demo2801.vercel.app/",
+        "image": "/projects/la-orda.webp"
+      },
+      {
+        "id": "fisiovida",
+        "name": "FisioVida",
+        "category": "Clínica · COMPLETAR",
+        "role": "COMPLETAR",
+        "timeline": "COMPLETAR",
+        "year": "COMPLETAR",
+        "team": "COMPLETAR",
+        "description": "COMPLETAR",
+        "stack": ["HTML", "CSS", "JavaScript"],
+        "url": "https://github.com/ros1llo/clinica-fisioterapia",
+        "image": "/projects/fisiovida.webp"
+      }
+    ]
+  },
+    "skills": {
+    "label": "// 05 — qué hago",
+    "title": "Qué",
+    "titleAccent": "hago.",
+    "items": [
+      {
+        "id": "frontend",
+        "title": "Desarrollo frontend",
+        "description": "Interfaces en React y JavaScript: rápidas, adaptadas a móvil y fáciles de mantener.",
+        "image": "/skills/frontend.webp"
+      },
+      {
+        "id": "webs-negocio",
+        "title": "Webs para negocios",
+        "description": "De la idea a la web publicada: estructura, textos, formularios y puesta en marcha.",
+        "image": "/skills/webs.webp"
+      },
+      {
+        "id": "seo-local",
+        "title": "SEO local",
+        "description": "Que te encuentren en tu barrio: ficha de Google, contenido local y una web técnicamente rápida.",
+        "image": "/skills/seo.webp"
+      },
+      {
+        "id": "diseno",
+        "title": "Diseño de interfaces",
+        "description": "Maqueto y pruebo las ideas en Figma antes de escribir una línea de código.",
+        "image": "/skills/diseno.webp"
+      }
+    ]
+  },
+    "contact": {
+    "label": "// 06 — contacto",
+    "title": "Hablemos",
+    "titleAccent": "de tu proyecto.",
+    "text": "¿Buscas un desarrollador en prácticas o una web para tu negocio? Cuéntame qué necesitas y te respondo en menos de 24 horas.",
+    "email": "a.rosolmedo@gmail.com",
+    "reasons": [
+      { "id": "web", "label": "Necesito una web" },
+      { "id": "trabajo", "label": "Prácticas o trabajo" },
+      { "id": "saludo", "label": "Solo saludar" }
+    ]
+  },
+    "footer": {
+    "tagline": "Entre el código y el diseño.",
+    "wordmark": "Rosillo",
+    "name": "Álvaro Rosillo"
+  }
+}
