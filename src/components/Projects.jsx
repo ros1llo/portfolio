@@ -10,22 +10,21 @@ const META = [
 ];
 
 function Projects({ projects }) {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(-1);
 
   return (
     <section id="proyectos" className="section projects">
       <p className="seccion-label">{projects.label}</p>
       <h2 className="seccion-titulo projects-heading">{projects.title}</h2>
 
-      <ul className="projects-list" onMouseLeave={() => setActive(0)}>
+      <ul className="projects-list" onMouseLeave={() => setActive(-1)}>
         {projects.items.map((project, index) => {
           const isActive = index === active;
           const rowClass = isActive ? "project-row is-active" : "project-row";
 
           return (
             <li key={project.id} className={rowClass} onMouseEnter={() => setActive(index)}>
-              <a href={project.url} target="_blank" rel="noreferrer" className="project-link" onFocus={() => setActive(index)}>
-                <div className="project-main">
+<a href={project.url} target="_blank" rel="noreferrer" className="project-link" onFocus={() => setActive(index)} onBlur={() => setActive(-1)}>                <div className="project-main">
                   <div className="project-head">
                     <SplitText as="h3" text={project.name} active={isActive} className="project-title" />
                     <span className="project-cta">

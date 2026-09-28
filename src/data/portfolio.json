@@ -58,6 +58,19 @@
         "url": "https://monalisa-bistrot.vercel.app/",
         "image": "/projects/monalisa.webp"
       },
+            {
+        "id": "comodin",
+        "name": "Bar Comodín",
+        "category": "Bar de espectáculos · Cliente",
+        "role": "Diseño y desarrollo",
+        "timeline": "COMPLETAR",
+        "year": "COMPLETAR",
+        "team": "Seggno",
+        "description": "Web de una página para un bar de transformismo en Sitges: identidad de marca, llamada directa y acceso a Google Maps.",
+        "stack": ["COMPLETAR"],
+        "url": "https://bar-comodin.vercel.app/",
+        "image": "/projects/comodin.webp"
+      },
       {
         "id": "la-orda",
         "name": "La Orda",

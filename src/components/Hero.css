@@ -119,6 +119,25 @@
   z-index: -1;
 }
 
+/* ===== REDES EN RECUADROS ===== */
+.hero-social { gap: 0.5rem; }
+
+.hero-social a {
+  display: inline-block;
+  padding: 0.6rem 1.1rem;
+  border: 1px solid var(--borde);
+  border-radius: 4px;
+  color: var(--texto);
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-social a:hover {
+  border-color: var(--acento-texto);
+  background: var(--fondo-tarjeta);
+  color: var(--acento-texto);
+}
+
+
 /* ===== MÓVIL ===== */
 @media (max-width: 900px) {
   .hero {

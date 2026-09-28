@@ -9,9 +9,11 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import useLenis from "./hooks/useLenis";
 
 function App() {
   const { theme, toggleTheme } = useTheme();
+  useLenis();
 
   return (
     <>
