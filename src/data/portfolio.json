@@ -19,5 +19,9 @@
     "tagline": "Construyo webs rápidas y cuidadas para negocios reales. Estudiante de DAW y co-fundador de Seggno.",
     "photo": "/foto.jpg",
     "photoAlt": "Retrato de Álvaro Rosillo"
+  },
+    "about": {
+    "label": "// 01 — sobre mí",
+    "text": "Soy Álvaro, desarrollador web en Valencia. Estudio DAW y soy co-fundador de *Seggno,* donde diseño y programo webs para *negocios* *locales* que quieren crecer en internet. Me importan los detalles: que cargue rápido, que se vea bien y que *funcione.*"
   }
 }

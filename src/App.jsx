@@ -2,6 +2,8 @@ import data from "./data/portfolio.json";
 import useTheme from "./hooks/useTheme";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import About from "./components/About";
+import Divider from "./components/Divider";
 
 function App() {
   const { theme, toggleTheme } = useTheme();
@@ -17,10 +19,13 @@ function App() {
 
       <main>
         <Hero hero={data.hero} social={data.social} />
+        <Divider />
+        <About about={data.about} />
+        <Divider />
 
         {/* Provisional: para poder probar el scroll */}
-        <section id="sobre" className="section" style={{ minHeight: "150vh" }}>
-          <p className="seccion-label">Descripción (siguiente paso)</p>
+        <section className="section" style={{ minHeight: "100vh" }}>
+        <p className="seccion-label">Tecnologías (siguiente paso)</p>
         </section>
       </main>
     </>
